@@ -401,28 +401,28 @@
                                             <tr>
                                                 <td>
                                                     <p style="text-align: center;">
-                                                        Permintaan turun dan persediaan banyak <br>
+                                                        Permintaan turun dan persediaan banyak maka produksi berkurang<br>
                                                         <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
                                                         Hasil operasi fuzzy = <?php echo $this->session->userdata('rule1'); ?>
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p style="text-align: center;">
-                                                        Permintaan turun dan persediaan sedikit <br>
+                                                        Permintaan turun dan persediaan sedikit maka produksi berkurang<br>
                                                         <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
                                                         Hasil operasi fuzzy = <?php echo $this->session->userdata('rule2'); ?>
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p style="text-align: center;">
-                                                        Permintaan naik dan persediaan banyak <br>
+                                                        Permintaan naik dan persediaan banyak maka produksi bertambah<br>
                                                         <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
                                                         Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
                                                     </p>
                                                 </td>
                                                 <td>
                                                     <p style="text-align: center;">
-                                                        Permintaan naik dan persediaan sedikit  <br>
+                                                        Permintaan naik dan persediaan sedikit maka produksi bertambah<br>
                                                         <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
                                                         Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
                                                     </p>
@@ -665,8 +665,8 @@
                                 <div class="card-body">
                                     <table class="table table-bordered">
                                         <thead>
-                                            <th>a1</th>
-                                            <th>a2</th>
+                                            <th>a1 (Berkurang)</th>
+                                            <th>a2 (Bertambah)</th>
                                         </thead>
                                         <tbody>
                                             <tr>

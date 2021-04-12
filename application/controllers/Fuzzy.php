@@ -120,7 +120,7 @@ class Fuzzy extends CI_Controller
             $sum2 = $sum2 + $data2;
             $count++;
         }
-        $hasil = round((($sum * $this->session->userdata('max_a1')) + ($sum2 * $this->session->userdata('max_a2'))) / ($count * $this->session->userdata('max_a1')) + ($count * $this->session->userdata('max_a2')));
+        $hasil = round((($sum * $this->session->userdata('max_a2')) + ($sum2 * $this->session->userdata('max_a1'))) / ($count * $this->session->userdata('max_a2')) + ($count * $this->session->userdata('max_a1')));
         return $hasil;
     }
 
