@@ -176,7 +176,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Persediaan Minimal (sedikit)</td>
-                                                    <td><input type="number" class="form-control" name="p_sedikit" readonly value="<?php echo $this->session->userdata('p_banyak'); ?>"></td>
+                                                    <td><input type="number" class="form-control" name="p_sedikit" readonly value="<?php echo $this->session->userdata('p_sedikit'); ?>"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Produksi Maksimum (bertambah)</td>
@@ -243,22 +243,26 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            $$μ_{sedikit}(x)\begin{cases}
-                                            \displaystyle 1, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
-                                            \displaystyle {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
-                                            \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                            \displaystyle 0, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                            \end{cases}
-                                            $$
+                                            <div class="chart">
+                                                $$μ_{sedikit}(x)\begin{cases}
+                                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
+                                                \displaystyle {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
+                                                \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                                \end{cases}
+                                                $$
+                                            </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            $$μ_{banyak}(x)\begin{cases}
-                                            \displaystyle 0, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
-                                            \displaystyle {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
-                                            \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                            \displaystyle 1, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                            \end{cases}
-                                            $$
+                                            <div class="chart">
+                                                $$μ_{banyak}(x)\begin{cases}
+                                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
+                                                \displaystyle {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
+                                                \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                                \end{cases}
+                                                $$
+                                            </div>
                                         </div>
                                     </div>
 
@@ -272,22 +276,26 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            $$μ_{berkurang}(x)\begin{cases}
-                                            \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                            \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                            \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                            \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                            \end{cases}
-                                            $$
+                                            <div class="chart">
+                                                $$μ_{berkurang}(x)\begin{cases}
+                                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                                \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                                \end{cases}
+                                                $$
+                                            </div>
                                         </div>
                                         <div class="col-sm-6">
-                                            $$μ_{bertambah}(x)\begin{cases}
-                                            \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                            \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                            \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                            \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                            \end{cases}
-                                            $$
+                                            <div class="chart">
+                                                $$μ_{bertambah}(x)\begin{cases}
+                                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                                \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                                \end{cases}
+                                                $$
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
