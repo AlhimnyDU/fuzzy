@@ -371,7 +371,7 @@
                                                 </td>
                                                 <td>
                                                     $$μ_{banyak}(x) = {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}$$
-                                                    $$μ_{banyak}(x) = {<?php echo $this->session->userdata('per_min'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_banyak'); ?>$$
+                                                    $$μ_{banyak}(x) = {<?php echo $this->session->userdata('per_sed'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_banyak'); ?>$$
                                                 </td>
                                                 <td>
                                                     $$μ_{bertambah}(x) = {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>}$$
@@ -422,7 +422,7 @@
                                                 </td>
                                                 <td>
                                                     <p style="text-align: center;">
-                                                        Permintaan naik dan persediaan sedikit <br>
+                                                        Permintaan naik dan persediaan sedikit  <br>
                                                         <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
                                                         Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
                                                     </p>
