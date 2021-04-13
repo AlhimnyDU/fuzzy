@@ -263,31 +263,31 @@
 
                             </div>
                             <!-- /.card-body -->
-                        </div>
-                        <div class="card card-danger">
-                            <div class="card-header">
-                                <h3 class="card-title">Himpunan Produksi Barang</h3>
+                            <div class="card card-danger">
+                                <div class="card-header">
+                                    <h3 class="card-title">Himpunan Produksi Barang</h3>
+                                </div>
+                                <div class="card-body">
+
+                                    $$μ_{berkurang}(x)\begin{cases}
+                                    \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                    \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                    \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                    \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                    \end{cases}
+                                    $$
+
+                                    $$μ_{bertambah}(x)\begin{cases}
+                                    \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                    \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                    \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                    \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                    \end{cases}
+                                    $$
+
+                                </div>
+                                <!-- /.card-body -->
                             </div>
-                            <div class="card-body">
-
-                                $$μ_{berkurang}(x)\begin{cases}
-                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                \end{cases}
-                                $$
-
-                                $$μ_{bertambah}(x)\begin{cases}
-                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                \end{cases}
-                                $$
-
-                            </div>
-                            <!-- /.card-body -->
                         </div>
                     </div>
                 </div>
