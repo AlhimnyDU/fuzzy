@@ -768,7 +768,6 @@
     <!-- AdminLTE for demo purposes -->
     <script src="<?php echo base_url() ?>assets/dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <script type="text/javascript">
         window.MathJax = {
             jax: ["input/TeX", "output/CommonHTML"],
@@ -834,6 +833,7 @@
             }
         };
     </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
     <script>
         $(function() {
             /* uPlot
