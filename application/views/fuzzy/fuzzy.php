@@ -217,26 +217,22 @@
                                     <h3 class="card-title">Himpunan Permintaan Barang</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            $$μ_{turun}(x)\begin{cases}
-                                            \displaystyle 1, x \le <?php echo $this->session->userdata('p_turun'); ?> \\
-                                            \displaystyle {<?php echo $this->session->userdata('p_naik'); ?> - x \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}, \\
-                                            \displaystyle <?php echo $this->session->userdata('p_turun'); ?> \lt x \lt <?php echo $this->session->userdata('p_naik'); ?> \\
-                                            \displaystyle 0, x \geq <?php echo $this->session->userdata('p_naik'); ?> \\
-                                            \end{cases}
-                                            $$
-                                        </div>
-                                        <div class="col-sm-6">
-                                            $$μ_{naik}(x)\begin{cases}
-                                            \displaystyle 0, x \le <?php echo $this->session->userdata('p_turun'); ?> \\
-                                            \displaystyle {x - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>},\\
-                                            \displaystyle <?php echo $this->session->userdata('p_turun'); ?> \lt x \lt <?php echo $this->session->userdata('p_naik'); ?> \\
-                                            \displaystyle 1, x \geq <?php echo $this->session->userdata('p_naik'); ?> \\
-                                            \end{cases}
-                                            $$
-                                        </div>
-                                    </div>
+
+                                    $$μ_{turun}(x)\begin{cases}
+                                    \displaystyle 1, x \le <?php echo $this->session->userdata('p_turun'); ?> \\
+                                    \displaystyle {<?php echo $this->session->userdata('p_naik'); ?> - x \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}, \\
+                                    \displaystyle <?php echo $this->session->userdata('p_turun'); ?> \lt x \lt <?php echo $this->session->userdata('p_naik'); ?> \\
+                                    \displaystyle 0, x \geq <?php echo $this->session->userdata('p_naik'); ?> \\
+                                    \end{cases}
+                                    $$
+
+                                    $$μ_{naik}(x)\begin{cases}
+                                    \displaystyle 0, x \le <?php echo $this->session->userdata('p_turun'); ?> \\
+                                    \displaystyle {x - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>},\\
+                                    \displaystyle <?php echo $this->session->userdata('p_turun'); ?> \lt x \lt <?php echo $this->session->userdata('p_naik'); ?> \\
+                                    \displaystyle 1, x \geq <?php echo $this->session->userdata('p_naik'); ?> \\
+                                    \end{cases}
+                                    $$
                                 </div>
                                 <!-- /.card-body -->
                             </div>
@@ -245,519 +241,507 @@
                                     <h3 class="card-title">Himpunan Persediaan Barang</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="chart">
-                                                $$μ_{sedikit}(x)\begin{cases}
-                                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
-                                                \displaystyle {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
-                                                \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                                \end{cases}
-                                                $$
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="chart">
-                                                $$μ_{banyak}(x)\begin{cases}
-                                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
-                                                \displaystyle {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
-                                                \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
-                                                \end{cases}
-                                                $$
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                    $$μ_{sedikit}(x)\begin{cases}
+                                    \displaystyle 1, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
+                                    \displaystyle {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
+                                    \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                    \displaystyle 0, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                    \end{cases}
+                                    $$
+
+
+                                    $$μ_{banyak}(x)\begin{cases}
+                                    \displaystyle 0, x \le <?php echo $this->session->userdata('p_sedikit'); ?> \\
+                                    \displaystyle {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>},\\
+                                    \displaystyle <?php echo $this->session->userdata('p_sedikit'); ?> \lt x \lt <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                    \displaystyle 1, x \geq <?php echo $this->session->userdata('p_banyak'); ?> \\
+                                    \end{cases}
+                                    $$
 
                                 </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <div class="card card-danger">
-                                <div class="card-header">
-                                    <h3 class="card-title">Himpunan Produksi Barang</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="chart">
-                                                $$μ_{berkurang}(x)\begin{cases}
-                                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                                \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                                \end{cases}
-                                                $$
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="chart">
-                                                $$μ_{bertambah}(x)\begin{cases}
-                                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
-                                                \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
-                                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
-                                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
-                                                \end{cases}
-                                                $$
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-primary">
-                                <div class="card-header">
-                                    <h3 class="card-title">Permintaan</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart">
-                                        <div id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-success">
-                                <div class="card-header">
-                                    <h3 class="card-title">Persediaan</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart">
-                                        <div id="lineChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-danger">
-                                <div class="card-header">
-                                    <h3 class="card-title">Produksi</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart">
-                                        <div id="lineChart3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-dark">
-                                <div class="card-header">
-                                    Fuzzifikasi
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <th>Fuzzifikasi Permintaan</th>
-                                            <th>Fuzzifikasi Persediaan</th>
-                                            <th>Fuzzifikasi Produksi</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    $$μ_{turun}(x) = {<?php echo $this->session->userdata('p_naik'); ?> - x \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}$$
-                                                    $$μ_{turun}(x) = {<?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('per_min'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}=<?php echo $this->session->userdata('m_turun'); ?>$$
 
-                                                </td>
-                                                <td>
-                                                    $$μ_{sedikit}(x) = {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}$$
-                                                    $$μ_{sedikit}(x) = {<?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('per_sed'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_sedikit'); ?>$$
-                                                </td>
-                                                <td>
-                                                    $$μ_{berkurang}(x) = {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>}$$
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    $$μ_{naik}(x) = {x - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}$$
-                                                    $$μ_{naik}(x) = {<?php echo $this->session->userdata('per_min'); ?> - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}=<?php echo $this->session->userdata('m_naik'); ?>$$
-                                                </td>
-                                                <td>
-                                                    $$μ_{banyak}(x) = {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}$$
-                                                    $$μ_{banyak}(x) = {<?php echo $this->session->userdata('per_sed'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_banyak'); ?>$$
-                                                </td>
-                                                <td>
-                                                    $$μ_{bertambah}(x) = {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>}$$
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
+                            <!-- /.card-body -->
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-pink">
-                                <div class="card-header">
-                                    Operasi Fuzzy
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <th>Rule 1</th>
-                                            <th>Rule 2</th>
-                                            <th>Rule 3</th>
-                                            <th>Rule 4</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <p style="text-align: center;">
-                                                        Permintaan turun dan persediaan banyak maka produksi berkurang<br>
-                                                        <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
-                                                        Hasil operasi fuzzy = <?php echo $this->session->userdata('rule1'); ?>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p style="text-align: center;">
-                                                        Permintaan turun dan persediaan sedikit maka produksi berkurang<br>
-                                                        <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
-                                                        Hasil operasi fuzzy = <?php echo $this->session->userdata('rule2'); ?>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p style="text-align: center;">
-                                                        Permintaan naik dan persediaan banyak maka produksi bertambah<br>
-                                                        <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
-                                                        Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
-                                                    </p>
-                                                </td>
-                                                <td>
-                                                    <p style="text-align: center;">
-                                                        Permintaan naik dan persediaan sedikit maka produksi bertambah<br>
-                                                        <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
-                                                        Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
-                                                    </p>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                        <div class="card card-danger">
+                            <div class="card-header">
+                                <h3 class="card-title">Himpunan Produksi Barang</h3>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-purple">
-                                <div class="card-header">
-                                    Implikasi
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <th>Rule 1</th>
-                                            <th>Rule 2</th>
-                                            <th>Rule 3</th>
-                                            <th>Rule 4</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    $$ α - predikat_{1} = μ_{turun} ∩ μ_{banyak} $$
-                                                    $$ α - predikat_{1} = min(μ_{turun}[<?php echo $this->session->userdata('per_min'); ?>], μ_{banyak}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
-                                                    $$ α - predikat_{1} = min(<?php echo $this->session->userdata('m_turun'); ?>;<?php echo $this->session->userdata('m_banyak'); ?>) $$
-                                                    $$ α - predikat_{1} = <?php echo $this->session->userdata('rule1'); ?> $$
-                                                </td>
-                                                <td>
-                                                    $$ α - predikat_{2} = μ_{turun} ∩ μ_{sedikit} $$
-                                                    $$ α - predikat_{2} = min(μ_{turun}[<?php echo $this->session->userdata('per_min'); ?>], μ_{sedikit}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
-                                                    $$ α - predikat_{2} = min(<?php echo $this->session->userdata('m_turun'); ?>;<?php echo $this->session->userdata('m_sedikit'); ?>) $$
-                                                    $$ α - predikat_{2} = <?php echo $this->session->userdata('rule2'); ?> $$
-                                                </td>
-                                                <td>
-                                                    $$ α - predikat_{3} = μ_{naik} ∩ μ_{banyak} $$
-                                                    $$ α - predikat_{3} = min(μ_{naik}[<?php echo $this->session->userdata('per_min'); ?>], μ_{banyak}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
-                                                    $$ α - predikat_{3} = min(<?php echo $this->session->userdata('m_naik'); ?>;<?php echo $this->session->userdata('m_banyak'); ?>) $$
-                                                    $$ α - predikat_{3} = <?php echo $this->session->userdata('rule3'); ?> $$
-                                                </td>
-                                                <td>
-                                                    $$ α - predikat_{4} = μ_{naik} ∩ μ_{sedikit} $$
-                                                    $$ α - predikat_{4} = min(μ_{naik}[<?php echo $this->session->userdata('per_min'); ?>], μ_{sedikit}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
-                                                    $$ α - predikat_{4} = min(<?php echo $this->session->userdata('m_naik'); ?>;<?php echo $this->session->userdata('m_sedikit'); ?>) $$
-                                                    $$ α - predikat_{4} = <?php echo $this->session->userdata('rule4'); ?> $$
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-gray">
-                                <div class="card-header">
-                                    Grafik
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-responsive table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <td align="center" colspan="4"><label for="">Rule 1</label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Turun
-                                                </td>
-                                                <td>
-                                                    Banyak
-                                                </td>
-                                                <td>
-                                                    Berkurang
-                                                </td>
-                                                <td>
-                                                    Hasil Implikasi
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule1_turun" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                            <div class="card-body">
 
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule1_banyak" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule1_berkurang" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule1_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" colspan="4"><label for="">Rule 2</label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Turun
-                                                </td>
-                                                <td>
-                                                    Sedikit
-                                                </td>
-                                                <td>
-                                                    Berkurang
-                                                </td>
-                                                <td>
-                                                    Hasil Implikasi
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule2_turun" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                $$μ_{berkurang}(x)\begin{cases}
+                                \displaystyle 1, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                \displaystyle {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                \displaystyle 0, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                \end{cases}
+                                $$
 
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule2_sedikit" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule2_berkurang" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule2_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" colspan="4"><label for="">Rule 3</label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Naik
-                                                </td>
-                                                <td>
-                                                    Banyak
-                                                </td>
-                                                <td>
-                                                    Bertambah
-                                                </td>
-                                                <td>
-                                                    Hasil Implikasi
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule3_naik" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                $$μ_{bertambah}(x)\begin{cases}
+                                \displaystyle 0, x \le <?php echo $this->session->userdata('p_min'); ?> \\
+                                \displaystyle {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>},\\
+                                \displaystyle <?php echo $this->session->userdata('p_min'); ?> \lt x \lt <?php echo $this->session->userdata('p_max'); ?> \\
+                                \displaystyle 1, x \geq <?php echo $this->session->userdata('p_max'); ?> \\
+                                \end{cases}
+                                $$
 
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule3_banyak" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule3_bertambah" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule3_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" colspan="4"><label for="">Rule 4</label></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    Naik
-                                                </td>
-                                                <td>
-                                                    Sedikit
-                                                </td>
-                                                <td>
-                                                    Bertambah
-                                                </td>
-                                                <td>
-                                                    Hasil Implikasi
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule4_naik" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule4_sedikit" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule4_bertambah" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="chart">
-                                                        <div id="rule4_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Permintaan</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
                                 </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-success">
+                            <div class="card-header">
+                                <h3 class="card-title">Persediaan</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div id="lineChart2" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-danger">
+                            <div class="card-header">
+                                <h3 class="card-title">Produksi</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <div id="lineChart3" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-dark">
+                            <div class="card-header">
+                                Fuzzifikasi
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>Fuzzifikasi Permintaan</th>
+                                        <th>Fuzzifikasi Persediaan</th>
+                                        <th>Fuzzifikasi Produksi</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                $$μ_{turun}(x) = {<?php echo $this->session->userdata('p_naik'); ?> - x \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}$$
+                                                $$μ_{turun}(x) = {<?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('per_min'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}=<?php echo $this->session->userdata('m_turun'); ?>$$
+
+                                            </td>
+                                            <td>
+                                                $$μ_{sedikit}(x) = {<?php echo $this->session->userdata('p_banyak'); ?> - x \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}$$
+                                                $$μ_{sedikit}(x) = {<?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('per_sed'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_sedikit'); ?>$$
+                                            </td>
+                                            <td>
+                                                $$μ_{berkurang}(x) = {<?php echo $this->session->userdata('p_max'); ?> - x \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>}$$
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                $$μ_{naik}(x) = {x - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}$$
+                                                $$μ_{naik}(x) = {<?php echo $this->session->userdata('per_min'); ?> - <?php echo $this->session->userdata('p_turun'); ?> \over <?php echo $this->session->userdata('p_naik'); ?> - <?php echo $this->session->userdata('p_turun'); ?>}=<?php echo $this->session->userdata('m_naik'); ?>$$
+                                            </td>
+                                            <td>
+                                                $$μ_{banyak}(x) = {x - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}$$
+                                                $$μ_{banyak}(x) = {<?php echo $this->session->userdata('per_sed'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?> \over <?php echo $this->session->userdata('p_banyak'); ?> - <?php echo $this->session->userdata('p_sedikit'); ?>}=<?php echo $this->session->userdata('m_banyak'); ?>$$
+                                            </td>
+                                            <td>
+                                                $$μ_{bertambah}(x) = {x - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?> - <?php echo $this->session->userdata('p_min'); ?>}$$
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-maroon">
-                                <div class="card-header">
-                                    Komposisi Aturan
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <th>a1 (Berkurang)</th>
-                                            <th>a2 (Bertambah)</th>
-                                        </thead>
-                                        <tbody>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-pink">
+                            <div class="card-header">
+                                Operasi Fuzzy
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>Rule 1</th>
+                                        <th>Rule 2</th>
+                                        <th>Rule 3</th>
+                                        <th>Rule 4</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p style="text-align: center;">
+                                                    Permintaan turun dan persediaan banyak maka produksi berkurang<br>
+                                                    <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
+                                                    Hasil operasi fuzzy = <?php echo $this->session->userdata('rule1'); ?>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p style="text-align: center;">
+                                                    Permintaan turun dan persediaan sedikit maka produksi berkurang<br>
+                                                    <?php echo $this->session->userdata('m_turun'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
+                                                    Hasil operasi fuzzy = <?php echo $this->session->userdata('rule2'); ?>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p style="text-align: center;">
+                                                    Permintaan naik dan persediaan banyak maka produksi bertambah<br>
+                                                    <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_banyak'); ?> <br>
+                                                    Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p style="text-align: center;">
+                                                    Permintaan naik dan persediaan sedikit maka produksi bertambah<br>
+                                                    <?php echo $this->session->userdata('m_naik'); ?> dan <?php echo $this->session->userdata('m_sedikit'); ?> <br>
+                                                    Hasil operasi fuzzy = <?php echo $this->session->userdata('rule3'); ?>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-purple">
+                            <div class="card-header">
+                                Implikasi
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-responsive">
+                                    <thead>
+                                        <th>Rule 1</th>
+                                        <th>Rule 2</th>
+                                        <th>Rule 3</th>
+                                        <th>Rule 4</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                $$ α - predikat_{1} = μ_{turun} ∩ μ_{banyak} $$
+                                                $$ α - predikat_{1} = min(μ_{turun}[<?php echo $this->session->userdata('per_min'); ?>], μ_{banyak}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
+                                                $$ α - predikat_{1} = min(<?php echo $this->session->userdata('m_turun'); ?>;<?php echo $this->session->userdata('m_banyak'); ?>) $$
+                                                $$ α - predikat_{1} = <?php echo $this->session->userdata('rule1'); ?> $$
+                                            </td>
+                                            <td>
+                                                $$ α - predikat_{2} = μ_{turun} ∩ μ_{sedikit} $$
+                                                $$ α - predikat_{2} = min(μ_{turun}[<?php echo $this->session->userdata('per_min'); ?>], μ_{sedikit}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
+                                                $$ α - predikat_{2} = min(<?php echo $this->session->userdata('m_turun'); ?>;<?php echo $this->session->userdata('m_sedikit'); ?>) $$
+                                                $$ α - predikat_{2} = <?php echo $this->session->userdata('rule2'); ?> $$
+                                            </td>
+                                            <td>
+                                                $$ α - predikat_{3} = μ_{naik} ∩ μ_{banyak} $$
+                                                $$ α - predikat_{3} = min(μ_{naik}[<?php echo $this->session->userdata('per_min'); ?>], μ_{banyak}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
+                                                $$ α - predikat_{3} = min(<?php echo $this->session->userdata('m_naik'); ?>;<?php echo $this->session->userdata('m_banyak'); ?>) $$
+                                                $$ α - predikat_{3} = <?php echo $this->session->userdata('rule3'); ?> $$
+                                            </td>
+                                            <td>
+                                                $$ α - predikat_{4} = μ_{naik} ∩ μ_{sedikit} $$
+                                                $$ α - predikat_{4} = min(μ_{naik}[<?php echo $this->session->userdata('per_min'); ?>], μ_{sedikit}[<?php echo $this->session->userdata('per_sed'); ?>]) $$
+                                                $$ α - predikat_{4} = min(<?php echo $this->session->userdata('m_naik'); ?>;<?php echo $this->session->userdata('m_sedikit'); ?>) $$
+                                                $$ α - predikat_{4} = <?php echo $this->session->userdata('rule4'); ?> $$
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-gray">
+                            <div class="card-header">
+                                Grafik
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-responsive table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td align="center" colspan="4"><label for="">Rule 1</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Turun
+                                            </td>
+                                            <td>
+                                                Banyak
+                                            </td>
+                                            <td>
+                                                Berkurang
+                                            </td>
+                                            <td>
+                                                Hasil Implikasi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule1_turun" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule1_banyak" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule1_berkurang" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule1_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="4"><label for="">Rule 2</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Turun
+                                            </td>
+                                            <td>
+                                                Sedikit
+                                            </td>
+                                            <td>
+                                                Berkurang
+                                            </td>
+                                            <td>
+                                                Hasil Implikasi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule2_turun" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule2_sedikit" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule2_berkurang" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule2_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="4"><label for="">Rule 3</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Naik
+                                            </td>
+                                            <td>
+                                                Banyak
+                                            </td>
+                                            <td>
+                                                Bertambah
+                                            </td>
+                                            <td>
+                                                Hasil Implikasi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule3_naik" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule3_banyak" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule3_bertambah" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule3_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="4"><label for="">Rule 4</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Naik
+                                            </td>
+                                            <td>
+                                                Sedikit
+                                            </td>
+                                            <td>
+                                                Bertambah
+                                            </td>
+                                            <td>
+                                                Hasil Implikasi
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule4_naik" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule4_sedikit" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule4_bertambah" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="chart">
+                                                    <div id="rule4_implikasi" style="min-height: 200px; height: 300px; max-height: 300px; max-width: 100%;"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-maroon">
+                            <div class="card-header">
+                                Komposisi Aturan
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>a1 (Berkurang)</th>
+                                        <th>a2 (Bertambah)</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                $$ {a_{1} - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>}= <?php echo $this->session->userdata('max_a1'); ?> \\$$
+                                                $$ a_{1} = (<?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>)*<?php echo $this->session->userdata('max_a1'); ?>+<?php echo $this->session->userdata('p_min'); ?> = <?php echo $this->session->userdata('a1'); ?>$$
+                                            </td>
+                                            <td>
+                                                $$ {a_{2} - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>}= <?php echo $this->session->userdata('max_a2'); ?> \\$$
+                                                $$ a_{2} = (<?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>)*<?php echo $this->session->userdata('max_a2'); ?>+<?php echo $this->session->userdata('p_min'); ?> = <?php echo $this->session->userdata('a2'); ?>$$
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card card-teal">
+                            <div class="card-header">
+                                Defuzzifikasi
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <th>No</th>
+                                        <th>Bertambah</>
+                                        <th>Berkurang</th>
+                                    </thead>
+                                    <tbody>
+                                        <?php for ($i = 1; $i <= 10; $i++) { ?>
                                             <tr>
                                                 <td>
-                                                    $$ {a_{1} - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>}= <?php echo $this->session->userdata('max_a1'); ?> \\$$
-                                                    $$ a_{1} = (<?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>)*<?php echo $this->session->userdata('max_a1'); ?>+<?php echo $this->session->userdata('p_min'); ?> = <?php echo $this->session->userdata('a1'); ?>$$
+                                                    <?php echo $i; ?>
                                                 </td>
                                                 <td>
-                                                    $$ {a_{2} - <?php echo $this->session->userdata('p_min'); ?> \over <?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>}= <?php echo $this->session->userdata('max_a2'); ?> \\$$
-                                                    $$ a_{2} = (<?php echo $this->session->userdata('p_max'); ?>-<?php echo $this->session->userdata('p_min'); ?>)*<?php echo $this->session->userdata('max_a2'); ?>+<?php echo $this->session->userdata('p_min'); ?> = <?php echo $this->session->userdata('a2'); ?>$$
+                                                    <?php echo $this->session->userdata("bertambah[$i]"); ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $this->session->userdata("berkurang[$i]"); ?>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="card card-teal">
-                                <div class="card-header">
-                                    Defuzzifikasi
-                                </div>
-                                <div class="card-body">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <th>No</th>
-                                            <th>Bertambah</>
-                                            <th>Berkurang</th>
-                                        </thead>
-                                        <tbody>
-                                            <?php for ($i = 1; $i <= 10; $i++) { ?>
-                                                <tr>
-                                                    <td>
-                                                        <?php echo $i; ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $this->session->userdata("bertambah[$i]"); ?>
-                                                    </td>
-                                                    <td>
-                                                        <?php echo $this->session->userdata("berkurang[$i]"); ?>
-                                                    </td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="card card-navy">
+                            <div class="card-header">
+                                Hasil Defuzzifikasi
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-navy">
-                                <div class="card-header">
-                                    Hasil Defuzzifikasi
-                                </div>
-                                <div class="card-body">
-                                    $$<?php echo $this->session->userdata("hasil"); ?> kemasan/hari $$
-                                </div>
+                            <div class="card-body">
+                                $$<?php echo $this->session->userdata("hasil"); ?> kemasan/hari $$
                             </div>
                         </div>
                     </div>
-                    <!-- /.card -->
-                </div><!-- /.container-fluid -->
-            </section>
-            <!-- /.content -->
+                </div>
+                <!-- /.card -->
+        </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            <b>Version</b> 3.1.0
         </div>
-        <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.1.0
-            </div>
-            <strong>Copyright &copy; 2014-2021</strong> All rights reserved.
-        </footer>
+        <strong>Copyright &copy; 2014-2021</strong> All rights reserved.
+    </footer>
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Add Content Here -->
-        </aside>
-        <!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Add Content Here -->
+    </aside>
+    <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
 
